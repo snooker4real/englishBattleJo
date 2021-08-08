@@ -15,7 +15,7 @@ import java.io.IOException;
 import java.util.List;
 
 /**
- * Servlt implementation class IndexServlet
+ * Servlet implementation class IndexServlet
  */
 @WebServlet("/index")
 public class IndexServlet extends HttpServlet {
@@ -35,6 +35,7 @@ public class IndexServlet extends HttpServlet {
     /**
      * @see HttpServlet#doGet(HttpServletRequest req, HttpServletResponse resp)
      */
+    @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException{
         req.setAttribute("nbVerbes", verbeService.recupererNbVerbes());
         // Récupère tous les joueurs et les envoie à la JSP

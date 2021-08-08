@@ -40,6 +40,7 @@ public class ConnexionServlet extends HttpServlet {
     /**
      * @see HttpServlet#doPost(HttpServletRequest req, HttpServletResponse resp)
      */
+    @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         if (verbeService.recupererNbVerbes()==0){
             req.setAttribute("erreur", "il n'est pas possible de jouer, la base de verbes irréguliers est vide");

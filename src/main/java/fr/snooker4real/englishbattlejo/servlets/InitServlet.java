@@ -14,13 +14,16 @@ import java.util.Date;
 
 @WebServlet(urlPatterns = "/init", loadOnStartup = 1)
 public class InitServlet extends HttpServlet {
+    /**
+     *
+     */
     private static  final long serialVersionUID = 1L;
     private VerbeService verbeService = new VerbeServiceImpl();
     private NiveauService niveauService = new NiveauServiceImpl();
     private VilleService villeService = new VilleServiceImpl();
 
     public InitServlet() {
-        System.out.println(new Date() + " constructeur InitSevlet");
+        System.out.println(new Date() + " constructeur InitServlet");
     }
 
     public void init() throws ServletException {
@@ -32,7 +35,7 @@ public class InitServlet extends HttpServlet {
         }
 
         if (niveauService.recupererNiveaux().isEmpty()){
-            niveauService.ajouterNiveau("Débuant");
+            niveauService.ajouterNiveau("Débutant");
             niveauService.ajouterNiveau("Intermédiaire");
             niveauService.ajouterNiveau("Expert");
         }
