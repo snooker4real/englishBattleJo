@@ -16,7 +16,7 @@ import jakarta.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
 /**
- * The doPOst method will handle this connexion into the form of index.jsp
+ * The doPost method will handle this connexion into the form of index.jsp
  */
 @WebServlet("/connexion")
 public class ConnexionServlet extends HttpServlet {

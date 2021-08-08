@@ -25,5 +25,22 @@
     </form>
     <br>
     <h1>Hall of Fame</h1>
+    <table>
+        <c:forEach var="joueur" items="${joueurs}">
+            <tr>
+                <h2>${joueur.prenom}<c:if test="${joueur.estEnLigne}"> (en ligne)</c:if></h2>
+                <td><h2>${joueur.meilleurScore}</h2></td>
+            </tr>
+        </c:forEach>
+    </table>
+    <br>
+    <a href="inscription">Inscription</a>
+    <br>
+    <a href="inscriptionAvecTeleversement">Inscription avec téléversement</a>
+    <br>
+    <p>Nombre total de joueurs : ${joueurs.size()}</p>
+    <p><a href="joueurs">Liste de joueurs</a></p>
+    <p>Nombre total de verbes: ${nbVerbes}</p>
+    <p><a href="verbes">Liste des verbes</a></p>
 </body>
 </html>
