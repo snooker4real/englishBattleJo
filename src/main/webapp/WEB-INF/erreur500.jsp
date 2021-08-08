@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>Erreur 500</title>
 </head>
 <body>
 Désolé nous rencontrons une erreur technique :( Partez en vacances
